@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#070b15">
-<title>Prode Mundial 2026</title>
+<title>Prode Mundial 2026 · Ronda de 32</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#070b15; --bg2:#0c1322; --card:#101a2e; --line:rgba(255,255,255,.09);
-    --ink:#eef3fc; --muted:#9aa7c2;
-    --home:#34d399; --draw:#9aa7c2; --away:#8f97f3; --accent:#fbbf24; --value:#34d399;
+    --ink:#eef3fc; --muted:#9aa7c2; --accent:#fbbf24;
     --display:'Space Grotesk',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
   }
   *{box-sizing:border-box;}
@@ -32,7 +31,7 @@
 
   .card{
     background:linear-gradient(180deg,var(--card),var(--bg2)); border:1px solid var(--line);
-    border-radius:18px; padding:16px 16px 15px; box-shadow:0 8px 28px rgba(0,0,0,.35);
+    border-radius:18px; padding:16px; box-shadow:0 8px 28px rgba(0,0,0,.35);
     animation:rise .42s ease both; animation-delay:calc(var(--i) * 35ms);
   }
   @keyframes rise{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;}}
@@ -43,35 +42,12 @@
   .flag{font:600 11px/1 var(--body); letter-spacing:.07em; text-transform:uppercase; color:var(--accent);
         background:rgba(251,191,36,.12); border:1px solid rgba(251,191,36,.32); padding:4px 9px; border-radius:999px;}
 
-  .teams{display:flex; align-items:baseline; gap:8px; font-family:var(--display); margin:0 0 14px; font-weight:600;}
+  .teams{display:flex; align-items:baseline; gap:8px; font-family:var(--display); margin:0 0 12px; font-weight:600;}
   .team{font-size:18px; letter-spacing:-.01em;}
   .vs{color:var(--muted); font-size:12px; font-weight:500;}
 
-  .bar{display:flex; gap:3px; height:10px; margin-bottom:10px;}
-  .seg{border-radius:3px; min-width:6px;}
-  .seg.home{background:var(--home);} .seg.draw{background:var(--draw);} .seg.away{background:var(--away);}
-
-  .legend{display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12.5px; color:var(--muted); margin-bottom:10px;}
-  .lg strong{color:var(--ink); font-weight:600;}
-  .dot{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; vertical-align:middle;}
-  .dot.home{background:var(--home);} .dot.draw{background:var(--draw);} .dot.away{background:var(--away);}
-
-  .sources{font-size:12px; color:var(--muted); margin:0 0 12px; letter-spacing:.01em;}
-
-  .pickrow{display:flex; justify-content:space-between; align-items:center; gap:10px;
-           padding-top:12px; border-top:1px solid var(--line);}
-  .pick{font-family:var(--display); font-weight:600; font-size:15px;}
-  .pick-score{display:inline-block; margin-left:6px; font-family:var(--body); font-weight:700; font-size:12px; padding:2px 7px; border-radius:6px;}
-  .ps-home{background:var(--home); color:#04130c;}
-  .ps-away{background:var(--away); color:#0a0a2e;}
-  .ps-draw{background:var(--draw); color:#0b1220;}
-  .xg{font-size:12.5px; color:var(--muted);}
-
-  .value{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:12px;
-         background:rgba(52,211,153,.09); border:1px solid rgba(52,211,153,.28); border-radius:12px; padding:10px;}
-  .value-tag{font:700 10px/1 var(--body); letter-spacing:.1em; color:#04130c; background:var(--value); padding:4px 7px; border-radius:6px;}
-  .value-bet{font-size:12.5px; color:#bdf3da;}
-  .value-bet b{color:#ecfdf5;}
+  .venue{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--muted);
+         margin:0; padding-top:12px; border-top:1px solid var(--line);}
 
   footer{margin:28px 6px 0; color:var(--muted); font-size:12px; text-align:center; line-height:1.6;}
 </style>
@@ -79,383 +55,159 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="kicker">⚽ Predicciones</div>
+      <div class="kicker">⚽ Fixture</div>
       <h1>Prode Mundial 2026</h1>
-      <p class="sub">Modelo Poisson/Dixon-Coles + ELO · Generado 2026-06-17 19:05 UTC</p>
+      <p class="sub">Ronda de 32 · Fixture oficial FIFA · Actualizado 2026-06-28</p>
     </header>
     <div class="grid">
 
   <article class="card" style="--i:0">
     <div class="card-top">
-      <span class="date">06-17</span>
-      <span class="flag">parejo</span>
+      <span class="date">Dom 28/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Portugal</span> <span class="vs">vs</span> <span class="team">DR Congo</span></h2>
-
-    <div class="bar" role="img" aria-label="Portugal 27 por ciento, empate 66 por ciento, DR Congo 7 por ciento">
-      <span class="seg home" style="flex:0.2730309549945115"></span>
-      <span class="seg draw" style="flex:0.6598897914379802"></span>
-      <span class="seg away" style="flex:0.06707925356750823"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Portugal <strong>27%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>66%</strong></span>
-      <span class="lg"><b class="dot away"></b>DR Congo <strong>7%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 65/21/14 · mercado 2/96/2</p>
-
-    <div class="pickrow">
-      <span class="pick">Empate <span class="pick-score ps-draw">1-1</span></span>
-      <span class="xg">xG 2.081–0.876</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Local</b> @65.00 · +4112% · 20u</span><span class="value-bet"><b>Visitante</b> @91.00 · +1201% · 20u</span>
-         </div>
+    <h2 class="teams"><span class="team">Sudáfrica</span> <span class="vs">vs</span> <span class="team">Canadá</span></h2>
+    <p class="venue">📍 Los Ángeles · SoFi Stadium</p>
   </article>
 
   <article class="card" style="--i:1">
     <div class="card-top">
-      <span class="date">06-17</span>
-      <span></span>
+      <span class="date">Lun 29/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Uzbekistan</span> <span class="vs">vs</span> <span class="team">Colombia</span></h2>
-
-    <div class="bar" role="img" aria-label="Uzbekistan 12 por ciento, empate 21 por ciento, Colombia 67 por ciento">
-      <span class="seg home" style="flex:0.12419874772132837"></span>
-      <span class="seg draw" style="flex:0.20737389236744075"></span>
-      <span class="seg away" style="flex:0.6684273599112309"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Uzbekistan <strong>12%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>21%</strong></span>
-      <span class="lg"><b class="dot away"></b>Colombia <strong>67%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 17/22/61 · mercado 10/20/71</p>
-
-    <div class="pickrow">
-      <span class="pick">Colombia <span class="pick-score ps-away">0-2</span></span>
-      <span class="xg">xG 0.928–1.964</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Local</b> @10.50 · +75% · 20u</span><span class="value-bet"><b>Empate</b> @5.10 · +14% · 8u</span>
-         </div>
+    <h2 class="teams"><span class="team">Brasil</span> <span class="vs">vs</span> <span class="team">Japón</span></h2>
+    <p class="venue">📍 Houston · NRG Stadium</p>
   </article>
 
   <article class="card" style="--i:2">
     <div class="card-top">
-      <span class="date">06-17</span>
-      <span class="flag">parejo</span>
+      <span class="date">Lun 29/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">England</span> <span class="vs">vs</span> <span class="team">Croatia</span></h2>
-
-    <div class="bar" role="img" aria-label="England 54 por ciento, empate 26 por ciento, Croatia 20 por ciento">
-      <span class="seg home" style="flex:0.5377749003984064"></span>
-      <span class="seg draw" style="flex:0.25745796812749006"></span>
-      <span class="seg away" style="flex:0.20476713147410358"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>England <strong>54%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>26%</strong></span>
-      <span class="lg"><b class="dot away"></b>Croatia <strong>20%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 49/26/26 · mercado 57/26/17</p>
-
-    <div class="pickrow">
-      <span class="pick">England <span class="pick-score ps-home">1-0</span></span>
-      <span class="xg">xG 1.626–1.121</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Visitante</b> @5.90 · +52% · 20u</span>
-         </div>
+    <h2 class="teams"><span class="team">Alemania</span> <span class="vs">vs</span> <span class="team">Paraguay</span></h2>
+    <p class="venue">📍 Boston · Gillette Stadium</p>
   </article>
 
   <article class="card" style="--i:3">
     <div class="card-top">
-      <span class="date">06-17</span>
-      <span class="flag">parejo</span>
+      <span class="date">Lun 29/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Ghana</span> <span class="vs">vs</span> <span class="team">Panama</span></h2>
-
-    <div class="bar" role="img" aria-label="Ghana 32 por ciento, empate 27 por ciento, Panama 41 por ciento">
-      <span class="seg home" style="flex:0.3184009934471966"></span>
-      <span class="seg draw" style="flex:0.2699227929324829"></span>
-      <span class="seg away" style="flex:0.41167621362032053"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Ghana <strong>32%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>27%</strong></span>
-      <span class="lg"><b class="dot away"></b>Panama <strong>41%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 18/23/60 · mercado 41/30/29</p>
-
-    <div class="pickrow">
-      <span class="pick">Panama <span class="pick-score ps-away">0-2</span></span>
-      <span class="xg">xG 0.95–1.919</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Visitante</b> @3.50 · +108% · 20u</span>
-         </div>
+    <h2 class="teams"><span class="team">Países Bajos</span> <span class="vs">vs</span> <span class="team">Marruecos</span></h2>
+    <p class="venue">📍 Monterrey · Estadio BBVA</p>
   </article>
 
   <article class="card" style="--i:4">
     <div class="card-top">
-      <span class="date">06-18</span>
-      <span class="flag">parejo</span>
+      <span class="date">Mar 30/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Czech Republic</span> <span class="vs">vs</span> <span class="team">South Africa</span></h2>
-
-    <div class="bar" role="img" aria-label="Czech Republic 53 por ciento, empate 25 por ciento, South Africa 22 por ciento">
-      <span class="seg home" style="flex:0.5253194945996633"></span>
-      <span class="seg draw" style="flex:0.25483652790516215"></span>
-      <span class="seg away" style="flex:0.21984397749517465"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Czech Republic <strong>53%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>25%</strong></span>
-      <span class="lg"><b class="dot away"></b>South Africa <strong>22%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 49/26/26 · mercado 55/25/20</p>
-
-    <div class="pickrow">
-      <span class="pick">Czech Republic <span class="pick-score ps-home">1-0</span></span>
-      <span class="xg">xG 1.628–1.119</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Visitante</b> @5.10 · +31% · 19u</span>
-         </div>
+    <h2 class="teams"><span class="team">Costa de Marfil</span> <span class="vs">vs</span> <span class="team">Noruega</span></h2>
+    <p class="venue">📍 Dallas · AT&T Stadium</p>
   </article>
 
   <article class="card" style="--i:5">
     <div class="card-top">
-      <span class="date">06-18</span>
-      <span class="flag">parejo</span>
+      <span class="date">Mar 30/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Mexico</span> <span class="vs">vs</span> <span class="team">South Korea</span></h2>
-
-    <div class="bar" role="img" aria-label="Mexico 47 por ciento, empate 28 por ciento, South Korea 25 por ciento">
-      <span class="seg home" style="flex:0.47093608247422675"></span>
-      <span class="seg draw" style="flex:0.2763958762886598"></span>
-      <span class="seg away" style="flex:0.2526680412371134"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Mexico <strong>47%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>28%</strong></span>
-      <span class="lg"><b class="dot away"></b>South Korea <strong>25%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 47/26/28 · mercado 47/29/24</p>
-
-    <div class="pickrow">
-      <span class="pick">Mexico <span class="pick-score ps-home">2-1</span></span>
-      <span class="xg">xG 1.611–1.188</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Visitante</b> @4.20 · +16% · 12u</span>
-         </div>
+    <h2 class="teams"><span class="team">Francia</span> <span class="vs">vs</span> <span class="team">Suecia</span></h2>
+    <p class="venue">📍 Nueva York/Nueva Jersey · MetLife Stadium</p>
   </article>
 
   <article class="card" style="--i:6">
     <div class="card-top">
-      <span class="date">06-18</span>
-      <span></span>
+      <span class="date">Mar 30/06</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Switzerland</span> <span class="vs">vs</span> <span class="team">Bosnia and Herzegovina</span></h2>
-
-    <div class="bar" role="img" aria-label="Switzerland 62 por ciento, empate 22 por ciento, Bosnia and Herzegovina 16 por ciento">
-      <span class="seg home" style="flex:0.623"></span>
-      <span class="seg draw" style="flex:0.219"></span>
-      <span class="seg away" style="flex:0.158"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Switzerland <strong>62%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>22%</strong></span>
-      <span class="lg"><b class="dot away"></b>Bosnia and Herzegovina <strong>16%</strong></span>
-    </div>
-    
-
-    <div class="pickrow">
-      <span class="pick">Switzerland <span class="pick-score ps-home">2-0</span></span>
-      <span class="xg">xG 2.004–0.909</span>
-    </div>
-
-    
+    <h2 class="teams"><span class="team">México</span> <span class="vs">vs</span> <span class="team">Ecuador</span></h2>
+    <p class="venue">📍 Ciudad de México · Estadio Azteca</p>
   </article>
 
   <article class="card" style="--i:7">
     <div class="card-top">
-      <span class="date">06-18</span>
-      <span></span>
+      <span class="date">Mié 01/07</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Canada</span> <span class="vs">vs</span> <span class="team">Qatar</span></h2>
-
-    <div class="bar" role="img" aria-label="Canada 72 por ciento, empate 18 por ciento, Qatar 10 por ciento">
-      <span class="seg home" style="flex:0.7232282398785136"></span>
-      <span class="seg draw" style="flex:0.17788025558006937"></span>
-      <span class="seg away" style="flex:0.09889150454141715"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Canada <strong>72%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>18%</strong></span>
-      <span class="lg"><b class="dot away"></b>Qatar <strong>10%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 67/20/13 · mercado 76/17/8</p>
-
-    <div class="pickrow">
-      <span class="pick">Canada <span class="pick-score ps-home">2-0</span></span>
-      <span class="xg">xG 2.199–0.87</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Empate</b> @6.10 · +20% · 10u</span><span class="value-bet"><b>Visitante</b> @13.00 · +70% · 15u</span>
-         </div>
+    <h2 class="teams"><span class="team">Inglaterra</span> <span class="vs">vs</span> <span class="team">RD Congo</span></h2>
+    <p class="venue">📍 Atlanta · Mercedes-Benz Stadium</p>
   </article>
 
   <article class="card" style="--i:8">
     <div class="card-top">
-      <span class="date">06-19</span>
-      <span class="flag">parejo</span>
+      <span class="date">Mié 01/07</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Scotland</span> <span class="vs">vs</span> <span class="team">Morocco</span></h2>
-
-    <div class="bar" role="img" aria-label="Scotland 20 por ciento, empate 26 por ciento, Morocco 54 por ciento">
-      <span class="seg home" style="flex:0.20041120221903208"></span>
-      <span class="seg draw" style="flex:0.2635864035621305"></span>
-      <span class="seg away" style="flex:0.5360023942188374"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Scotland <strong>20%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>26%</strong></span>
-      <span class="lg"><b class="dot away"></b>Morocco <strong>54%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 25/26/49 · mercado 17/27/56</p>
-
-    <div class="pickrow">
-      <span class="pick">Morocco <span class="pick-score ps-away">0-1</span></span>
-      <span class="xg">xG 1.106–1.648</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Local</b> @6.10 · +52% · 20u</span>
-         </div>
+    <h2 class="teams"><span class="team">Bélgica</span> <span class="vs">vs</span> <span class="team">Senegal</span></h2>
+    <p class="venue">📍 Seattle · Lumen Field</p>
   </article>
 
   <article class="card" style="--i:9">
     <div class="card-top">
-      <span class="date">06-19</span>
-      <span></span>
+      <span class="date">Mié 01/07</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Brazil</span> <span class="vs">vs</span> <span class="team">Haiti</span></h2>
-
-    <div class="bar" role="img" aria-label="Brazil 83 por ciento, empate 12 por ciento, Haiti 6 por ciento">
-      <span class="seg home" style="flex:0.8251856147618152"></span>
-      <span class="seg draw" style="flex:0.1154861231406515"></span>
-      <span class="seg away" style="flex:0.05932826209753343"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Brazil <strong>83%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>12%</strong></span>
-      <span class="lg"><b class="dot away"></b>Haiti <strong>6%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 73/17/10 · mercado 89/8/3</p>
-
-    <div class="pickrow">
-      <span class="pick">Brazil <span class="pick-score ps-home">2-0</span></span>
-      <span class="xg">xG 2.394–0.761</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Empate</b> @13.00 · +124% · 20u</span><span class="value-bet"><b>Visitante</b> @29.00 · +178% · 16u</span>
-         </div>
+    <h2 class="teams"><span class="team">Estados Unidos</span> <span class="vs">vs</span> <span class="team">Bosnia y Herzegovina</span></h2>
+    <p class="venue">📍 Bahía de San Francisco · Levi's Stadium</p>
   </article>
 
   <article class="card" style="--i:10">
     <div class="card-top">
-      <span class="date">06-19</span>
-      <span></span>
+      <span class="date">Jue 02/07</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">United States</span> <span class="vs">vs</span> <span class="team">Australia</span></h2>
-
-    <div class="bar" role="img" aria-label="United States 49 por ciento, empate 24 por ciento, Australia 27 por ciento">
-      <span class="seg home" style="flex:0.48934172209029597"></span>
-      <span class="seg draw" style="flex:0.2362707856865374"></span>
-      <span class="seg away" style="flex:0.2743874922231666"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>United States <strong>49%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>24%</strong></span>
-      <span class="lg"><b class="dot away"></b>Australia <strong>27%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 31/26/43 · mercado 61/22/17</p>
-
-    <div class="pickrow">
-      <span class="pick">United States <span class="pick-score ps-home">2-1</span></span>
-      <span class="xg">xG 1.261–1.517</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Empate</b> @4.60 · +21% · 15u</span><span class="value-bet"><b>Visitante</b> @5.80 · +147% · 20u</span>
-         </div>
+    <h2 class="teams"><span class="team">España</span> <span class="vs">vs</span> <span class="team">Austria</span></h2>
+    <p class="venue">📍 Los Ángeles</p>
   </article>
 
   <article class="card" style="--i:11">
     <div class="card-top">
-      <span class="date">06-19</span>
-      <span class="flag">parejo</span>
+      <span class="date">Jue 02/07</span>
+      <span class="flag">Ronda de 32</span>
     </div>
-
-    <h2 class="teams"><span class="team">Turkey</span> <span class="vs">vs</span> <span class="team">Paraguay</span></h2>
-
-    <div class="bar" role="img" aria-label="Turkey 45 por ciento, empate 28 por ciento, Paraguay 27 por ciento">
-      <span class="seg home" style="flex:0.4507365593088607"></span>
-      <span class="seg draw" style="flex:0.2793983530183432"></span>
-      <span class="seg away" style="flex:0.2698650876727961"></span>
-    </div>
-    <div class="legend">
-      <span class="lg"><b class="dot home"></b>Turkey <strong>45%</strong></span>
-      <span class="lg"><b class="dot draw"></b>Empate <strong>28%</strong></span>
-      <span class="lg"><b class="dot away"></b>Paraguay <strong>27%</strong></span>
-    </div>
-    <p class="sources">mezcla modelo+mercado · modelo 41/27/32 · mercado 48/29/24</p>
-
-    <div class="pickrow">
-      <span class="pick">Turkey <span class="pick-score ps-home">1-0</span></span>
-      <span class="xg">xG 1.452–1.255</span>
-    </div>
-
-    <div class="value">
-           <span class="value-tag">VALUE</span>
-           <span class="value-bet"><b>Visitante</b> @4.25 · +36% · 20u</span>
-         </div>
+    <h2 class="teams"><span class="team">Portugal</span> <span class="vs">vs</span> <span class="team">Croacia</span></h2>
+    <p class="venue">📍 Toronto</p>
   </article>
+
+  <article class="card" style="--i:12">
+    <div class="card-top">
+      <span class="date">Jue 02/07</span>
+      <span class="flag">Ronda de 32</span>
+    </div>
+    <h2 class="teams"><span class="team">Suiza</span> <span class="vs">vs</span> <span class="team">Argelia</span></h2>
+    <p class="venue">📍 Vancouver · BC Place</p>
+  </article>
+
+  <article class="card" style="--i:13">
+    <div class="card-top">
+      <span class="date">Vie 03/07</span>
+      <span class="flag">Ronda de 32</span>
+    </div>
+    <h2 class="teams"><span class="team">Australia</span> <span class="vs">vs</span> <span class="team">Egipto</span></h2>
+    <p class="venue">📍 Dallas</p>
+  </article>
+
+  <article class="card" style="--i:14">
+    <div class="card-top">
+      <span class="date">Vie 03/07</span>
+      <span class="flag">Ronda de 32</span>
+    </div>
+    <h2 class="teams"><span class="team">Argentina</span> <span class="vs">vs</span> <span class="team">Cabo Verde</span></h2>
+    <p class="venue">📍 Miami</p>
+  </article>
+
+  <article class="card" style="--i:15">
+    <div class="card-top">
+      <span class="date">Vie 03/07</span>
+      <span class="flag">Ronda de 32</span>
+    </div>
+    <h2 class="teams"><span class="team">Colombia</span> <span class="vs">vs</span> <span class="team">Ghana</span></h2>
+    <p class="venue">📍 Kansas City</p>
+  </article>
+
     </div>
     <footer>
-      Probabilidades del modelo (mezcladas con el mercado cuando hay cuotas). 💰 = el modelo difiere del mercado: tratar con escepticismo, no es consejo de apuestas.
+      Fixture de la Ronda de 32 del Mundial 2026 (sedes en EE. UU., México y Canadá). Horarios y sedes sujetos a confirmación oficial de FIFA. Las predicciones del modelo no se incluyen en esta actualización.
     </footer>
   </div>
 </body>
