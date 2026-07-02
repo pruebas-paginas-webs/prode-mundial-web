@@ -1,0 +1,147 @@
+{
+  "generated": "2026-06-28",
+  "params": {
+    "total_goals": 2.55,
+    "dc_rho": -0.10,
+    "market_weight": 0.72,
+    "host_elo_bonus": 80,
+    "elo_scale": 600,
+    "kelly_fraction": 0.25,
+    "value_threshold": 0.03,
+    "max_stake_u": 20,
+    "max_goals": 10
+  },
+  "ratings_note": "Puntos estilo FIFA/Elo (escala SUM, dr/600). Marruecos verificado en prensa jun-2026 (1776.40). El resto: última tabla FIFA completa disponible (dic-2025), reordenada según posiciones publicadas en jun-2026 (ARG 1º, ESP-FRA-ENG-POR top 5, BRA 6º, MEX 14º, USA 17º, CAN 30º). Editar aquí para recalibrar.",
+  "ratings": {
+    "Argentina": 1878,
+    "España": 1874,
+    "Francia": 1870,
+    "Inglaterra": 1836,
+    "Portugal": 1780,
+    "Marruecos": 1776,
+    "Países Bajos": 1772,
+    "Brasil": 1766,
+    "Bélgica": 1738,
+    "Alemania": 1715,
+    "Croacia": 1709,
+    "Colombia": 1697,
+    "México": 1689,
+    "Estados Unidos": 1672,
+    "Suiza": 1654,
+    "Senegal": 1644,
+    "Japón": 1641,
+    "Ecuador": 1590,
+    "Austria": 1584,
+    "Australia": 1569,
+    "Noruega": 1562,
+    "Canadá": 1556,
+    "Egipto": 1519,
+    "Argelia": 1516,
+    "Suecia": 1502,
+    "Paraguay": 1499,
+    "Costa de Marfil": 1494,
+    "RD Congo": 1444,
+    "Sudáfrica": 1392,
+    "Cabo Verde": 1352,
+    "Bosnia y Herzegovina": 1341,
+    "Ghana": 1334
+  },
+  "matches": [
+    {
+      "date": "Dom 28/06", "home": "Sudáfrica", "away": "Canadá",
+      "venue": "Los Ángeles · SoFi Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "RSA +490 / X +260 / CAN -150",
+      "odds": {"h": 5.90, "d": 3.60, "a": 1.6667}
+    },
+    {
+      "date": "Lun 29/06", "home": "Brasil", "away": "Japón",
+      "venue": "Houston · NRG Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "BRA -145 / X +280 / JPN +420",
+      "odds": {"h": 1.6897, "d": 3.80, "a": 5.20}
+    },
+    {
+      "date": "Lun 29/06", "home": "Alemania", "away": "Paraguay",
+      "venue": "Boston · Gillette Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "GER -340 / X +440 / PAR +1000",
+      "odds": {"h": 1.2941, "d": 5.40, "a": 11.00}
+    },
+    {
+      "date": "Lun 29/06", "home": "Países Bajos", "away": "Marruecos",
+      "venue": "Monterrey · Estadio BBVA", "host": null,
+      "book": "FanDuel 28/06", "line": "NED +120 / X +210 / MAR +270",
+      "odds": {"h": 2.20, "d": 3.10, "a": 3.70}
+    },
+    {
+      "date": "Mar 30/06", "home": "Costa de Marfil", "away": "Noruega",
+      "venue": "Dallas · AT&T Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "CIV +270 / X +240 / NOR +100",
+      "odds": {"h": 3.70, "d": 3.40, "a": 2.00}
+    },
+    {
+      "date": "Mar 30/06", "home": "Francia", "away": "Suecia",
+      "venue": "NY/NJ · MetLife Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "FRA -400 / X +500 / SWE +1000",
+      "odds": {"h": 1.25, "d": 6.00, "a": 11.00}
+    },
+    {
+      "date": "Mar 30/06", "home": "México", "away": "Ecuador",
+      "venue": "CDMX · Estadio Azteca", "host": "home",
+      "book": "FanDuel 28/06", "line": "MEX +125 / X +190 / ECU +270",
+      "odds": {"h": 2.25, "d": 2.90, "a": 3.70}
+    },
+    {
+      "date": "Mié 01/07", "home": "Inglaterra", "away": "RD Congo",
+      "venue": "Atlanta · Mercedes-Benz Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "ENG -400 / X +460 / DRC +1200",
+      "odds": {"h": 1.25, "d": 5.60, "a": 13.00}
+    },
+    {
+      "date": "Mié 01/07", "home": "Bélgica", "away": "Senegal",
+      "venue": "Seattle · Lumen Field", "host": null,
+      "book": "FanDuel 28/06", "line": "BEL +120 / X +210 / SEN +270",
+      "odds": {"h": 2.20, "d": 3.10, "a": 3.70}
+    },
+    {
+      "date": "Mié 01/07", "home": "Estados Unidos", "away": "Bosnia y Herzegovina",
+      "venue": "Bahía de SF · Levi's Stadium", "host": "home",
+      "book": "FanDuel 28/06", "line": "USA -290 / X +400 / BIH +850",
+      "odds": {"h": 1.3448, "d": 5.00, "a": 9.50}
+    },
+    {
+      "date": "Jue 02/07", "home": "España", "away": "Austria",
+      "venue": "Los Ángeles · SoFi Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "ESP -340 / X +440 / AUT +1000",
+      "odds": {"h": 1.2941, "d": 5.40, "a": 11.00}
+    },
+    {
+      "date": "Jue 02/07", "home": "Portugal", "away": "Croacia",
+      "venue": "Toronto · BMO Field", "host": null,
+      "book": "FanDuel 28/06", "line": "POR -130 / X +260 / CRO +400",
+      "odds": {"h": 1.7692, "d": 3.60, "a": 5.00}
+    },
+    {
+      "date": "Jue 02/07", "home": "Suiza", "away": "Argelia",
+      "venue": "Vancouver · BC Place", "host": null,
+      "book": "FanDuel 28/06", "line": "SUI +105 / X +220 / ALG +300",
+      "odds": {"h": 2.05, "d": 3.20, "a": 4.00}
+    },
+    {
+      "date": "Vie 03/07", "home": "Australia", "away": "Egipto",
+      "venue": "Dallas · AT&T Stadium", "host": null,
+      "book": "DraftKings 27/06", "line": "AUS +225 / X +200 / EGY +150",
+      "odds": {"h": 3.25, "d": 3.00, "a": 2.50}
+    },
+    {
+      "date": "Vie 03/07", "home": "Argentina", "away": "Cabo Verde",
+      "venue": "Miami · Hard Rock Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "ARG -700 / X +650 / CPV +1900",
+      "odds": {"h": 1.1429, "d": 7.50, "a": 20.00}
+    },
+    {
+      "date": "Vie 03/07", "home": "Colombia", "away": "Ghana",
+      "venue": "Kansas City · Arrowhead Stadium", "host": null,
+      "book": "FanDuel 28/06", "line": "COL -180 / X +270 / GHA +600",
+      "odds": {"h": 1.5556, "d": 3.70, "a": 7.00}
+    }
+  ]
+}
